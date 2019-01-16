@@ -540,7 +540,7 @@ define(function(require, exports, module) {
                 isAvailable: commands.commands.restartc9vm.isAvailable,
                 exec: function() {
                     confirm("Restart Workspace?",
-                        "Are you sure you want to restart CS50 IDE?",
+                        "Are you sure you want to restart Edutin IDE?",
                         "Any files you have open will stay open.",
 
                         // OK
@@ -559,7 +559,7 @@ define(function(require, exports, module) {
         }
 
         /**
-         * Customizes "Cloud9" menu for CS50 IDE
+         * Customizes "Cloud9" menu for Edutin IDE
          */
         function customizeC9Menu() {
             var dashboard = "Cloud9/Go To Your Dashboard";
@@ -578,7 +578,7 @@ define(function(require, exports, module) {
                     if (user && user.id) {
                         var path = "user_" + user.id + "/";
 
-                        // move "Account" to CS50 IDE menu
+                        // move "Account" to Edutin IDE menu
                         menus.addItemByPath("Cloud9/Account", menus.get(path + "Account").item, 298, plugin);
 
                         // remove items from user's menu
@@ -595,7 +595,7 @@ define(function(require, exports, module) {
                 // remove "Dashboard" offline
                 menus.remove(dashboard);
 
-                // remove CS50 IDE > Log out offline
+                // remove Edutin IDE > Log out offline
                 menus.remove("Cloud9/Quit Cloud9");
             }
 
@@ -614,7 +614,7 @@ define(function(require, exports, module) {
                 onclick: function() {
                     confirm("Reset Settings",
                         "",
-                        "Are you sure you want to reset CS50 IDE to factory " +
+                        "Are you sure you want to reset Edutin IDE to factory " +
                         "defaults? It will then look just as it did when you " +
                         "created it. Your files and folders will not be deleted.",
                         // OK
@@ -1148,7 +1148,7 @@ define(function(require, exports, module) {
         function hideMenus() {
             // hide each menu item
             [
-                // CS50 IDE menu
+                // Edutin IDE menu
                 "Cloud9/Open Your Keymap",
                 "Cloud9/Open Your Stylesheet",
 
@@ -1227,7 +1227,7 @@ define(function(require, exports, module) {
                     // hide minimize button
                     minimizeBtn.setAttribute("visible", false);
 
-                    // left-align "CS50 IDE" menu within menu bar
+                    // left-align "Edutin IDE" menu within menu bar
                     bar.$int.style.paddingLeft = "0";
                 }
             }
@@ -1491,7 +1491,7 @@ define(function(require, exports, module) {
         function updateMenuCaptions() {
             // map paths to captions
             var captions = {
-                "Cloud9": "CS50 IDE",
+                "Cloud9": "Edutin IDE",
                 "Cloud9/Quit Cloud9": "Log Out",
                 "Goto": "Go",
                 "Goto/Goto Anything...": "Anything...",
@@ -1512,11 +1512,11 @@ define(function(require, exports, module) {
          * Sets and updates the title of the browser tab.
          */
         function updateTitle(tab) {
-            var title = "CS50 IDE";
+            var title = "Edutin IDE";
 
             // append "Offline" to offline IDE title
-            if (!c9.hosted)
-                title += " Offline";
+            //if (!c9.hosted)
+            //    title += " Offline";
 
             // prepend tab title when should
             document.title = tab && settings.getBool("user/tabs/@title")
