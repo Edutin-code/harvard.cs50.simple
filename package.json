@@ -1,5 +1,5 @@
 {
-  "author": "CS50",
+  "author": "Edutin",
   "contributors": [
     {
       "name": "Nicholas Joseph"
@@ -20,9 +20,17 @@
     {
       "email": "malan@harvard.edu",
       "name": "David J. Malan"
+    },
+    {
+      "email": "mijail@edutin.com",
+      "name": "Mijail D. Molina Lavrishcheva"
+    },
+    {
+      "email": "administrador@edutin.com",
+      "name": "Sergio Obredor"
     }
   ],
-  "description": "Simplifies the CS50 IDE",
+  "description": "Simplifies the Edutin IDE",
   "name": "harvard.cs50.simple",
   "plugins": {
     "simple": {}
